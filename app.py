@@ -28,7 +28,7 @@ if st.button("Analyze"):
 
     for word in suspicious_words:
         if word in msg_lower:
-            keyword_score += 15
+            keyword_score += 5
 
     pred = model.predict([msg])[0]
     prob = model.predict_proba([msg])

@@ -34,12 +34,9 @@ for word in suspicious_words:
         keyword_score += 15
 
 scam_score = min(scam_score + keyword_score, 100)
-
     pred = model.predict([msg])[0]
     prob = model.predict_proba([msg])
-
     scam_score = round(prob[0][1] * 100, 2)
-
     if pred == 1:
         st.error(f"⚠ Scam Detected ({scam_score}%)")
     else:

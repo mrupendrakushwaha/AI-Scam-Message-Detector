@@ -20,8 +20,7 @@ if st.button("Analyze"):
     "upi",
     "reward",
     "won"
-]
-
+    ]
 msg_lower = msg.lower()
 
 for word in suspicious_words:
